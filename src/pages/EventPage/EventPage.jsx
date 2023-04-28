@@ -74,7 +74,9 @@ const EventPage = ({ user, setUser }) => {
             fetchUsersData()
 
             function checkIfUserIsComing() {
-                const comingCheck = EventsUsers.filter(user1 => user1.userId === user._id)
+              const comingCheck = EventsUsers.filter(user1 => user1.userId === user._id)
+                console.log("step1 EventsUsers", EventsUsers)
+                console.log("user._id", user._id)
                 console.log("comingCheck", comingCheck)
                 if (comingCheck.length > 0) { setIsComing(true) } else
                     { setIsComing(false) }
