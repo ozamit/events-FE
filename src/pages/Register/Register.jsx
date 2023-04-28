@@ -11,6 +11,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import HomeIcon from '@mui/icons-material/Home';
 
+import { host } from '../../utils/host';
+
 const Register = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
