@@ -14,6 +14,8 @@ import PlaylistAddCheckCircleIcon from '@mui/icons-material/PlaylistAddCheckCirc
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import IconButton from '@mui/material/IconButton';
 
+import { host } from '../../utils/host';
+
 const CurrentUserItems = ({ EventsItems, usersPlusItems, EventsUsers, user, fetchUsersDataNow, isComing }) => {
     
   const [currentUserItems, setCurrentUserItems ] = useState([])
@@ -65,7 +67,7 @@ const CurrentUserItems = ({ EventsItems, usersPlusItems, EventsUsers, user, fetc
     }
 
     async function addItemsToDB(data) {
-      const res = await axios.put("http://localhost:3000/items/removeItemFromUser", data)
+      const res = await axios.put(`${host}/items/removeItemFromUser`, data)
       console.log("res", res)
       fetchUsersDataNow()
       window.location.reload();

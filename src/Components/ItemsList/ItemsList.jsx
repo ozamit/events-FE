@@ -9,6 +9,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import { host } from '../../utils/host';
 
 const ItemsList = ({ AllUsers, EventsItems, usersPlusItems, EventsUsers, user, fetchUsersDataNow, isComing }) => {
 
@@ -25,7 +26,7 @@ const ItemsList = ({ AllUsers, EventsItems, usersPlusItems, EventsUsers, user, f
       "ItemId" : data
     }
     console.log("dataToSend", dataToSend)
-    const res = await axios.put("http://localhost:3000/items/addItemToUser", dataToSend)
+    const res = await axios.put(`${host}/items/addItemToUser`, dataToSend)
     console.log("res", res)
     console.log("handleAddItemClick")
     fetchUsersDataNow()

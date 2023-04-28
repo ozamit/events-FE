@@ -9,6 +9,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Chip from '@mui/material/Chip';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+import { host } from '../../utils/host';
 
 const AccordionContent = ({ AllUsers, usersPlusItems, user, itemId, eventId, loginUser, fetchUsersDataNow }) => {
 
@@ -25,7 +26,7 @@ async function handleRemoveItemClick() {
       "ItemId" : itemId
     }
     // console.log("dataToSend", dataToSend)
-    const res = await axios.put("http://localhost:3000/items/removeItemFromUser", dataToSend)
+    const res = await axios.put(`${host}/items/removeItemFromUser`, dataToSend)
     console.log("res", res)
     console.log("handleRemoveItemClick")
     fetchUsersDataNow()
