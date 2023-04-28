@@ -54,7 +54,8 @@ const EventPage = ({ user, setUser }) => {
             // console.log("data1", data)
             const res1 = await axios.put(`${host}/event/getEventsUsers`, data)
             setEventsUsers(res1.data.data)
-            // console.log("EventsUsers", EventsUsers)
+            console.log("res1.data.data (EventsUsers)", res1.data.data)
+            console.log("EventsUsers", EventsUsers)
 
             const resItems = await axios.put(`${host}/items/getEventsItems`, data)
             setEventsItems(resItems.data.data)
