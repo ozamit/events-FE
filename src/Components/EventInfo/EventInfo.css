@@ -1,0 +1,8 @@
+.infoItem {
+    display: flex;
+    justify-content: center;
+}
+
+.EventInfoWrapper{
+    margin: 20px 0 0 0;
+}
