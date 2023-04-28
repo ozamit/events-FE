@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 
+import { host } from '../../utils/host';
+
 const UsersList = ({ EventsUsers, AllUsers, isComing, EventsItems, user, usersPlusItems, fetchUsersDataNow }) => {
 
   const [currentUserItems, setCurrentUserItems ] = useState([])
@@ -53,7 +55,7 @@ function handlefinalCancel() {
         "eventId": EventsItems[0].eventId
     }
     console.log("dataToSend", dataToSend)
-    const resUserPlusItems = await axios.put("http://localhost:3000/event/AddUserToEvent", dataToSend)
+    const resUserPlusItems = await axios.put(`${host}/event/AddUserToEvent`, dataToSend)
     console.log("ComingRes", resUserPlusItems)
     setFinalRemove(1)
     window.location.reload();
