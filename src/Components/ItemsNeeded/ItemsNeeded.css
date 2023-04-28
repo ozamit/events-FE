@@ -1,0 +1,22 @@
+.page_wrapper{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.listItem{
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.icon {
+    margin: 0 0 0 10px !important;
+}
+
+.ListItemText{
+    margin: 0 0 0 10px !important;
+}
+
+.list1{
+    display: flex !important;
+    justify-content: flex-end !important;
+}

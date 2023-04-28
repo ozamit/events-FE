@@ -1,0 +1,14 @@
+.CurrentUserItemsTitle {
+    margin: 20px 0;
+}
+
+.oneItem {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin: 20px;
+}
+
+.itemName {
+    display: flex !important;
+    
+}
