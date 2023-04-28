@@ -74,21 +74,27 @@ const EventPage = ({ user, setUser }) => {
             }
             fetchUsersData()
 
-            function checkIfUserIsComing() {
-              const comingCheck = EventsUsers.filter(user1 => user1.userId === user._id)
-                console.log("step1 EventsUsers", EventsUsers)
-                console.log("user._id", user._id)
-                console.log("comingCheck", comingCheck)
-                if (comingCheck.length > 0) { setIsComing(true) } else
-                    { setIsComing(false) }
-                
-            }
-            checkIfUserIsComing()
-
             console.log("user", user)
         }, []);
 
         // console.log("EventsUsers1", EventsUsers)
+
+        useEffect(() => {
+
+          function checkIfUserIsComing() {
+            const comingCheck = EventsUsers.filter(user1 => user1.userId === user._id)
+              console.log("step1 EventsUsers", EventsUsers)
+              console.log("user._id", user._id)
+              console.log("comingCheck", comingCheck)
+              if (comingCheck.length > 0) { setIsComing(true) } else
+                  { setIsComing(false) }
+              
+          }
+          checkIfUserIsComing()
+
+
+
+      }, [EventsUsers]);
 
 
         useEffect(() => {
