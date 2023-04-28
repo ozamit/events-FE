@@ -11,6 +11,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import HomeIcon from '@mui/icons-material/Home';
 
+import { host } from '../../utils/host';
+
 const Login = () => {
     
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -20,7 +22,7 @@ const Login = () => {
     
     const onSubmit = async (data) => {
         console.log(data)
-        const res = await axios.put("http://localhost:3000/user/login", data)
+        const res = await axios.put(`${host}/user/login`, data)
         console.log('res:', res)
         if(res.data.status === "success") {
             localStorage.setItem('User', JSON.stringify(res.data.message));
