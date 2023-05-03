@@ -5,7 +5,6 @@ import axios from "axios";
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Button from '@mui/material/Button';
@@ -19,14 +18,12 @@ const UsersList = ({ EventsUsers, AllUsers, isComing, EventsItems, user, usersPl
   const [currentUserItems, setCurrentUserItems ] = useState([])
   const [errorMsg, setErrorMsg ] = useState(0)
   const [finalRemove, setFinalRemove ] = useState(0)
-  // const [isComingLocal, setIsComingLocal ] = useState(0)
 
 
   const temp = usersPlusItems.filter(usersPlusItem => usersPlusItem.userId === user._id)
 
   useEffect(() => {
     setCurrentUserItems(temp)
-    // setIsComingLocal(isComing)
   }, [])
 
 
@@ -107,17 +104,15 @@ async function createDataToSend() {
           
         {EventsUsers.map((item, i) => { 
           const thisUser = AllUsers.filter((user, i) => user._id === item.userId)
-          // console.log(thisUser)
+          console.log("thisUser", thisUser)
 
         return <Box key={i} width="100%">
                           <Divider></Divider>
         <nav className='listUser'>
               <List>
                 <ListItem >
-                  {/* <ListItemButton> */}
                     <ListItemText primary={thisUser[0].username} />
                     <AccountCircleIcon className='AccountCircleIcon' />
-                  {/* </ListItemButton> */}
                 </ListItem>
               </List>
             </nav>
