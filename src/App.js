@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Router, Routes, Route, HashRouter } from "react-router-dom";
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
@@ -79,16 +79,16 @@ function handleRefresh() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
 
         <Routes>
           <Route path="/" element={<Home user={user} setUser={setUser}/>} />
           <Route path="/login" element={<Login />} />
-          <Route path="/#/Register" element={<Register />} />
+          <Route path="/Register" element={<Register />} />
           <Route path="/Event" element={<EventPage setUser={setUser} user={user} handleRefresh={handleRefresh}/>} />
         </Routes>  
 
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
