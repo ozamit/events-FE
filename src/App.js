@@ -84,7 +84,7 @@ function handleRefresh() {
         <Routes>
           <Route path="/" element={<Home user={user} setUser={setUser}/>} />
           <Route path="/login" element={<Login />} />
-          <Route path="/Register" element={<Register />} />
+          <Route path="/#/Register" element={<Register />} />
           <Route path="/Event" element={<EventPage setUser={setUser} user={user} handleRefresh={handleRefresh}/>} />
         </Routes>  
 
