@@ -103,6 +103,9 @@ async function createDataToSend() {
           { finalRemove > 0 && <Button onClick={handlefinalNotComingClick} variant="contained">סופי! ביטול הרשמה</Button> }
           
         {EventsUsers.map((item, i) => { 
+          console.log("EventsUsers", EventsUsers)
+          console.log("AllUsers", AllUsers)
+          console.log("item", item)
           const thisUser = AllUsers.filter((user, i) => user._id === item.userId)
           console.log("thisUser", thisUser)
 
