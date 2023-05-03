@@ -68,7 +68,7 @@ async function handlefinalNotComingClick() {
         "eventId": EventsItems[0].eventId
     }
     console.log("dataToSend", dataToSend)
-    const resUserPlusItems = await axios.put("http://localhost:3000/event/RemoveUserFromEvent", dataToSend)
+    const resUserPlusItems = await axios.put(`${host}/event/RemoveUserFromEvent`, dataToSend)
     console.log("ComingRes", resUserPlusItems)
     window.location.reload();
 
@@ -91,7 +91,7 @@ async function createDataToSend() {
   }
 
   async function addItemsToDB(data) {
-    const res = await axios.put("http://localhost:3000/items/removeItemFromUser", data)
+    const res = await axios.put(`${host}/items/removeItemFromUser`, data)
     console.log("res", res)
     fetchUsersDataNow()
     window.location.reload();

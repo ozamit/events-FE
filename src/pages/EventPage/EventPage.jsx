@@ -92,8 +92,6 @@ const EventPage = ({ user, setUser }) => {
           }
           checkIfUserIsComing()
 
-
-
       }, [EventsUsers]);
 
 
