@@ -22,7 +22,7 @@ const Register = () => {
     
     const onSubmit = async (data) => {
         console.log(data)
-        const res = await axios.put(`"${host}/user/register`, data)
+        const res = await axios.put(`${host}/user/register`, data)
         console.log(res)
         if (res.data.status === "success") {
         navigate("/login")
