@@ -197,7 +197,7 @@ const EventPage = ({ user, setUser }) => {
         {user !== "אורח" && <Button color="inherit" onClick={handleLogout}><LogoutIcon /></Button> }
         {user === "אורח" && <Button color="inherit" onClick={handleLogin}><LoginIcon /></Button> } 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Events
+            Eventify 🕺💃
           </Typography>
           <Typography color="inherit">{user.username}</Typography>
         </Toolbar>

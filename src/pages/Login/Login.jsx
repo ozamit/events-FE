@@ -49,7 +49,7 @@ const Login = () => {
         <Toolbar>
         <HomeIcon color="inherit" onClick={handleHome}></HomeIcon>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Events
+          Eventify
           </Typography>
         </Toolbar>
       </AppBar>

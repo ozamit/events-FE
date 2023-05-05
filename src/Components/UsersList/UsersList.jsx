@@ -89,7 +89,7 @@ async function createDataToSend() {
 
   async function addItemsToDB(data) {
     const res = await axios.put(`${host}/items/removeItemFromUser`, data)
-    console.log("res", res)
+    console.log("res - removeItemFromUser", res)
     fetchUsersDataNow()
     window.location.reload();
 }
